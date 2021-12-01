@@ -1,6 +1,6 @@
 package com.example.helloworld
 
-class Person {
+open class Person {
     var name = ""
     var age = 0
     fun eat(){
