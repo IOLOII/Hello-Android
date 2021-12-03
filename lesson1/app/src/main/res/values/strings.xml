@@ -1,0 +1,8 @@
+<resources>
+<!--    可以看到，这里定义了一个应用程序名的字符串，我们有以下两种方式来引用它。-->
+<!--    在代码中通过R.string.app_name可以获得该字符串的引用。-->
+<!--    在XML中通过@string/app_name可以获得该字符串的引用。-->
+    <string name="app_name">Hello Android</string>
+    <string name="IOLOII">HELLOQWE</string>
+    <!--    基本的语法就是上面这两种方式，其中string部分是可以替换的，如果是引用的图片资源就可以替换成drawable，如果是引用的应用图标就可以替换成mipmap，如果是引用的布局文件就可以替换成layout，以此类推。-->
+</resources>
