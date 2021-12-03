@@ -9,13 +9,13 @@ plugins {
 
 android {
 //    compileSdkVersion用于指定项目的编译版本，这里指定成29表示使用Android 10.0系统的SDK编译。
-    compileSdkVersion 30
+    compileSdkVersion 28
 //    buildToolsVersion用于指定项目构建工具的版本，目前最新的版本就是29.0.2，如果有更新的版本时，Android Studio会进行提示
-    buildToolsVersion '30.0.3'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.example.helloworld"
-        minSdkVersion 30
+        minSdkVersion 23
         targetSdkVersion 30
 //        versionCode用于指定项目的版本号，versionName用于指定项目的版本名。
         versionCode 1

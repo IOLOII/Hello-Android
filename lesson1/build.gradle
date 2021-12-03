@@ -1,4 +1,7 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    var = '4.1.0'
+    var1 = '3.6.4'
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
 //通常情况下，你并不需要修改这个文件中的内容，除非你想添加一些全局的项目构建配置。
 buildscript {
     ext.kotlin_version = "1.3.72"
@@ -7,8 +10,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath 'com.android.tools.build:gradle'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:3.5.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
