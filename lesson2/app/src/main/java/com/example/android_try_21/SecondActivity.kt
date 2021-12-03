@@ -8,7 +8,7 @@ import android.widget.Button
 
 import kotlinx.android.synthetic.main.second_layout.*
 
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.second_layout)
@@ -16,16 +16,15 @@ class SecondActivity : AppCompatActivity() {
         Log.d("SecondActivity", "extra data is $extraData")
 
 
-//        var button2:Button = findViewById(R.id.button2)
 //
         button2.setOnClickListener {
-//            val intent = Intent(this,FirstActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this,FirstActivity::class.java)
+            startActivity(intent)
 
-            val intent = Intent()
-            intent.putExtra("data_return", "Hello FirstActivity")
-            setResult(RESULT_OK, intent)
-            finish()
+//            val intent = Intent()
+//            intent.putExtra("data_return", "Hello FirstActivity")
+//            setResult(RESULT_OK, intent)
+//            finish()
 
         }
     }

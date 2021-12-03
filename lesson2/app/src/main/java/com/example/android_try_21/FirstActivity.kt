@@ -15,10 +15,11 @@ import kotlinx.android.synthetic.main.first_layout.*
 // 勾选Generate Layout File表示会自动为FirstActivity创建一个对应的布局文件，
 // 勾选Launcher Activity表示会自动将FirstActivity设置为当前项目的主Activity。
 // 最好每一个Activity都能对应一个布局。布局是用来显示界面内容的，我们现在就来手动创建一个布局文件。
-class FirstActivity : AppCompatActivity() {
+class FirstActivity : BaseActivity() {
 //    调用了父类的onCreate()方法。当然这只是默认的实现
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("FirstActivity",this.toString())
 //        调用了setContentView()方法来给当前的Activity加载一个布局，而在setContentView()方法中，我们一般会传入一个布局文件的id
 //        只需要调用R.layout.first_layout就可以得到first_layout.xml布局的id
 //        所有的Activity都要在AndroidManifest.xml中进行注册才能生效。
@@ -29,13 +30,17 @@ class FirstActivity : AppCompatActivity() {
 //            val intent = Intent(this,SecondActivity::class.java)
 //            startActivity(intent)
 
+            var intent = Intent(this,FirstActivity::class.java)
+            startActivity(intent)
+
 //            val data = "Hello SecondActivity"
 //            val intent = Intent(this, SecondActivity::class.java)
 //            intent.putExtra("extra_data", data)
 //            startActivity(intent)
 
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivityForResult(intent, 1)
+//            val intent = Intent(this, SecondActivity::class.java)
+//            返回数据给上一层
+//            startActivityForResult(intent, 1)
 
 
 
@@ -56,6 +61,10 @@ class FirstActivity : AppCompatActivity() {
             startActivity(intent)
 
 
+        }
+        buttonTest.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 
